@@ -9,8 +9,8 @@ int main(void) {
 	if (fgets(str, sizeof(str), stdin) == NULL) return 1;
 
 	for (char* p = str; *p != '\0'; p++) {
-		if (*p >= 'a' && *p <= 'z') {
-			*p -= 32;
+		if (*p >= 'A' && *p <= 'Z') {
+			*p += 32;
 		}
 		if (*p != ' '&& *p != '\n') count++;
 	}
